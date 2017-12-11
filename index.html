@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/games.js"></script>
+</head>
+
+<body>
+  <div class="header">
+  <img src="assets/images/logo.jpg" alt="Logo">
+  <h2>Emerald Game</h2>
+  </div>
+  <div class="Instructions">
+    <h3>Here's how you play the game</h3>
+    <p>There are 4 rings, each has a random number associated with them. By clicking on a ring, you will add a specific amount of points to your total score. If your total score matches the target score you win and you have helped Sonic get an emerald. You
+      lose if your total score goes above the random number. Each time when the game starts, the game will change the values of each ring.</p>
+  </div>
+  <div class="numberToMatch">
+    <h2>Target Score: <span  id= "randomNumber"></span></h2>
+  </div>
+  <div class="winsAndLoses">
+    <h2>Wins: <span id="numberWins"></span></h2>
+    <h2>Loses: <span id="numberLosses"></span></h2>
+  </div>
+  <div class="Sonic">
+    <img src="" id="pictureToChange">
+    <h2><span id="outcome"></span></h2>
+  </div>
+  <div class="buttons">
+    <img class="image" id="image1" src="assets/images/ring.jpg">
+    <img class="image" id="image2" src="assets/images/ring.jpg">
+    <img class="image" id="image3" src="assets/images/ring.jpg">
+    <img class="image" id="image4" src="assets/images/ring.jpg">
+    <form class="Resetform" action="index.html" method="post">
+      <button type="button" name="button" class="reset">Reset</button>
+    </form>
+  </div>
+  <div class="WinTracker">
+  <div class="userTotal">
+    <h2>Your Total Score: <span id="finalTotal"></span></h2>
+  </div>
+<div class="Emeralds">
+      <img src="" id="Emeraldpic">
+</div>
+</div>
+</body>
+
+</html>

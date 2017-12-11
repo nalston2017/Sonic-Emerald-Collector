@@ -1,0 +1,41 @@
+body{
+	background-image: url("../images/background.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+div{
+	background-color: white;
+	margin: 10px;
+	width: 25%
+  border: solid 2px antiquewhite;
+  padding: 10px;
+}
+h1, h3, span{
+	font-weight: bold;
+	text-align: center;
+}
+h1{
+	font-size: 30px;
+}
+div.header, div.buttons{
+	background-color: #e0e0eb;
+}
+div.header, div.instructions{
+	width: 50%;
+}
+.numberToMatch, .winsAndLosses{
+	float: left;
+	width: 15%;
+	height: 60px;
+}
+.userTotal{
+	width: 15%;
+	height: 60px;
+}
+.buttons{
+	clear: both;
+}
+.buttons img{
+	height: 60px;
+	margin: 10px;
+}
