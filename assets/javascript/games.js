@@ -73,49 +73,82 @@ $(document).ready(function() {
 
   $("#image1").on("click", function() {
     userTotal = userTotal + num1;
+    console.log("New_userTotal " + userTotal);
+    $("#finalTotal").text(userTotal);
+
+    if (userTotal == random) {
+      winner();
+      num1 = false;
+      wins = false;
+      losses = false;
+      emeraldcount = false;
+    } else if (userTotal > random) {
+      loser();
+      num1 = false;
+      wins = false;
+      losses = false;
+      emeraldcount = false;
+    }
+  })
+
+  $("#image2").on("click", function() {
+    userTotal = userTotal + num2;
     console.log("New userTotal " + userTotal);
     $("#finalTotal").text(userTotal);
 
     if (userTotal == random) {
-      winner()
+      winner();
+      num2 = false;
+      wins = false;
+      losses = false;
+      emeraldcount = false;
     } else if (userTotal > random) {
-      loser()
+      loser();
+      num2 = false;
+      wins = false;
+      losses = false;
+      emeraldcount = false;
+      userTotal = false;
     }
   })
 
-$("#image2").on("click", function() {
-  userTotal = userTotal + num2;
-  console.log("New userTotal " + userTotal);
-  $("#finalTotal").text(userTotal);
+  $("#image3").on("click", function() {
+    userTotal = userTotal + num3;
+    console.log("New userTotal " + userTotal);
+    $("#finalTotal").text(userTotal);
 
-  if (userTotal == random) {
-    winner()
-  } else if (userTotal > random) {
-    loser()
-  }
-})
+    if (userTotal == random) {
+      winner();
+      num3 = false;
+      wins = false;
+      losses = false;
+      emeraldcount = false;
+    } else if (userTotal > random) {
+      loser();
+      num3 = false;
+      wins = false;
+      losses = false;
+      emeraldcount = false;
+    }
+  })
 
-$("#image3").on("click", function() {
-  userTotal = userTotal + num3;
-  console.log("New userTotal " + userTotal);
-  $("#finalTotal").text(userTotal);
+  $("#image4").on("click", function() {
+    userTotal = userTotal + num4;
+    console.log("New userTotal " + userTotal);
+    $("#finalTotal").text(userTotal);
 
-  if (userTotal == random) {
-    winner()
-  } else if (userTotal > random) {
-    loser()
-  }
-})
-
-$("#image4").on("click", function() {
-  userTotal = userTotal + num4;
-  console.log("New userTotal " + userTotal);
-  $("#finalTotal").text(userTotal);
-
-  if (userTotal == random) {
-    winner()
-  } else if (userTotal > random) {
-    loser()
-  }
-})
+    if (userTotal == random) {
+      winner();
+      num4 = false;
+      wins = false;
+      losses = false;
+      emeraldcount = false;
+    } else if (userTotal > random) {
+      loser();
+      num4 = false;
+      wins = false;
+      losses = false;
+      emeraldcount = false;
+    }
+  })
 });

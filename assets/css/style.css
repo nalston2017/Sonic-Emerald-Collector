@@ -1,18 +1,17 @@
-body{
-	/*background-image: url("../images/background.jpg");*/
-	background-size: 100%;
-	background-color: white;
-	/*background-repeat: no-repeat;*/
+body {
+  background-size: 100%;
+  background-color: white;
 }
 
-.caption{
-	position: relative;
+.caption {
+  position: relative;
 }
 
 .titleEG {
-margin-bottom: 0px;
-padding-bottom: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
+
 .title {
   height: 60px;
   width: 100%;
