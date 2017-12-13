@@ -13,6 +13,7 @@ $(document).ready(function() {
   var wins = 0;
   var losses = 0;
   var emeraldcount = 0;
+  var isGameOver = false
 
   $("#numberWins").text(wins);
   $("#numberLosses").text(losses);
@@ -30,6 +31,7 @@ $(document).ready(function() {
     num3 = Math.floor(Math.random() * 12 + 1);
     num4 = Math.floor(Math.random() * 12 + 1);
     userTotal = 0;
+    isGameOver = false;
     $("#Emeraldpic").attr("src", "assets/images/chaos_emeralds.jpg");
     $("#finalTotal").text(userTotal);
     $('#outcome').html('');
@@ -46,7 +48,7 @@ $(document).ready(function() {
     $("#numberWins").text(wins);
     emeraldcount++;
     $("#emeraldstrack").text(emeraldcount);
-
+    isGameOver = true;
     if (emeraldcount === 7) {
       $('#outcome').html("You've found all of the Chaos Emeralds. You have now become Super Sonic!");
       $("#pictureToChange").attr("src", "assets/images/SuperSonic.jpg");
@@ -61,10 +63,12 @@ $(document).ready(function() {
     losses++;
     $("#numberLosses").text(losses);
     $("#pictureToChange").attr("src", "assets/images/robotnik.jpg");
-
+    isGameOver = true;
     if (emeraldcount === 0) {
       $("#outcome").html('You Lose!');
-    } else {
+      $("#emeraldstrack").text(emeraldcount);
+    }
+    else if (emeraldcount >= 1) {
       emeraldcount--;
       $("#outcome").html('Oh NO! Dr. Robotnik stole a Chaos Emerald');
       $("#emeraldstrack").text(emeraldcount);
@@ -72,83 +76,66 @@ $(document).ready(function() {
   }
 
   $("#image1").on("click", function() {
-    userTotal = userTotal + num1;
-    console.log("New_userTotal " + userTotal);
-    $("#finalTotal").text(userTotal);
+    if (isGameOver === false) {
+      userTotal = userTotal + num1;
+      console.log("New_userTotal " + userTotal);
+      $("#finalTotal").text(userTotal);
 
-    if (userTotal == random) {
-      winner();
-      num1 = false;
-      wins = false;
-      losses = false;
-      emeraldcount = false;
-    } else if (userTotal > random) {
-      loser();
-      num1 = false;
-      wins = false;
-      losses = false;
-      emeraldcount = false;
+      if (userTotal == random) {
+        winner();
+        num1 = false;
+        wins = false;
+        losses = false;
+        emeraldcount = false;
+      } else if (userTotal > random) {
+        loser();
+        num1 = false;
+        wins = false;
+        losses = false;
+        emeraldcount = false;
+      }
     }
   })
 
   $("#image2").on("click", function() {
-    userTotal = userTotal + num2;
-    console.log("New userTotal " + userTotal);
-    $("#finalTotal").text(userTotal);
+    if (isGameOver === false) {
+      userTotal = userTotal + num2;
+      console.log("New userTotal " + userTotal);
+      $("#finalTotal").text(userTotal);
 
-    if (userTotal == random) {
-      winner();
-      num2 = false;
-      wins = false;
-      losses = false;
-      emeraldcount = false;
-    } else if (userTotal > random) {
-      loser();
-      num2 = false;
-      wins = false;
-      losses = false;
-      emeraldcount = false;
-      userTotal = false;
+      if (userTotal == random) {
+        winner();
+      } else if (userTotal > random) {
+        loser();
+      }
     }
   })
 
   $("#image3").on("click", function() {
-    userTotal = userTotal + num3;
-    console.log("New userTotal " + userTotal);
-    $("#finalTotal").text(userTotal);
+    if (isGameOver === false) {
+      userTotal = userTotal + num3;
+      console.log("New userTotal " + userTotal);
+      $("#finalTotal").text(userTotal);
 
-    if (userTotal == random) {
-      winner();
-      num3 = false;
-      wins = false;
-      losses = false;
-      emeraldcount = false;
-    } else if (userTotal > random) {
-      loser();
-      num3 = false;
-      wins = false;
-      losses = false;
-      emeraldcount = false;
+      if (userTotal == random) {
+        winner();
+      } else if (userTotal > random) {
+        loser();
+      }
     }
   })
 
   $("#image4").on("click", function() {
-    userTotal = userTotal + num4;
-    console.log("New userTotal " + userTotal);
-    $("#finalTotal").text(userTotal);
+    if (isGameOver === false) {
+      userTotal = userTotal + num4;
+      console.log("New userTotal " + userTotal);
+      $("#finalTotal").text(userTotal);
 
-    if (userTotal == random) {
-      winner();
-      num4 = false;
-      wins = false;
-      losses = false;
-      emeraldcount = false;
-    } else if (userTotal > random) {
-      loser();
-      num4 = false;
-      wins = false;
-      losses = false;
-      emeraldcount = false;
+      if (userTotal == random) {
+        winner();
+      } else if (userTotal > random) {
+        loser();
+      }
     }
   })
 });
