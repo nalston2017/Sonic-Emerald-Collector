@@ -1,53 +1,88 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
+  <title>Emerald Game</title>
+  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/games.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <div class="header">
-  <img src="assets/images/logo.jpg" alt="Logo">
-  <h2>Emerald Game</h2>
+  <div class="container">
+    <header>
+      <center>
+        <div class="header container">
+          <img src="assets/images/logo.jpg" alt="Logo">
+          <h1 class="titleEG">Emerald Madness</h1>
+        </div>
+      </center>
+    </header>
+
+
+    <!-- <div class="row">
+      <div class="col-12">
+      </div>
+    </div> -->
+    <div class="row">
+      <div class="col-4">
+        <h2>Instructions:</h2>
+        <p> Help Sonic collect the 8 Chaos Emeralds by using the value of the 4 rings to reach the target score. If your total score goes over the target score you lose a Chaos Emerald (if applicable) and Dr. Robotnik WINS! To start a new game click the reset
+          button</p>
+        <h2 class="numberToMatch">Target Score: <span  id= "randomNumber"></span></h2>
+        <h2 class="userTotal">Your Total Score: <span id="finalTotal"></span></h2>
+        <!-- <div class="winsAndLoses"> -->
+        <h2 class="winsAndLoses">Wins: <span id="numberWins"></span></h2>
+        <h2 class="winsAndLoses">Loses: <span id="numberLosses"></span></h2>
+        <button type="button" name="button" id="reset">Reset</button>
+      </div>
+      <!-- <div class="col-1">
+</div> -->
+
+      <div class="col-4">
+        <div class="caption Picture">
+          <img src="" id="pictureToChange">
+          <h3 class="title"><span id="outcome"></span></h3>
+        </div>
+        <div class="buttons">
+          <img class="image" id="image1" src="assets/images/ring.jpg">
+          <img class="image" id="image2" src="assets/images/ring.jpg">
+          <img class="image" id="image3" src="assets/images/ring.jpg">
+          <img class="image" id="image4" src="assets/images/ring.jpg">
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="caption Picture">
+          <img src="" id="Emeraldpic">
+          <h3 class="Emeraldtitle"><span id="emeraldstrack"></span></h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+    <div class="col-4">
+    </div>
+    <div class="col-4 buttons">
+      <img class="image" id="image1" src="assets/images/ring.jpg">
+      <img class="image" id="image2" src="assets/images/ring.jpg">
+      <img class="image" id="image3" src="assets/images/ring.jpg">
+      <img class="image" id="image4" src="assets/images/ring.jpg">
+    </div>
+    <div class="col-4">
+    </div>
+  </div> -->
   </div>
-  <div class="Instructions">
-    <h3>Here's how you play the game</h3>
-    <p>There are 4 rings, each has a random number associated with them. By clicking on a ring, you will add a specific amount of points to your total score. If your total score matches the target score you win and you have helped Sonic get an emerald. You
-      lose if your total score goes above the random number. Each time when the game starts, the game will change the values of each ring.</p>
-  </div>
-  <div class="numberToMatch">
-    <h2>Target Score: <span  id= "randomNumber"></span></h2>
-  </div>
-  <div class="winsAndLoses">
-    <h2>Wins: <span id="numberWins"></span></h2>
-    <h2>Loses: <span id="numberLosses"></span></h2>
-  </div>
-  <div class="Sonic">
-    <img src="" id="pictureToChange">
-    <h2><span id="outcome"></span></h2>
-  </div>
-  <div class="buttons">
-    <img class="image" id="image1" src="assets/images/ring.jpg">
-    <img class="image" id="image2" src="assets/images/ring.jpg">
-    <img class="image" id="image3" src="assets/images/ring.jpg">
-    <img class="image" id="image4" src="assets/images/ring.jpg">
-    <form class="Resetform" action="index.html" method="post">
-      <button type="button" name="button" class="reset">Reset</button>
-    </form>
-  </div>
-  <div class="WinTracker">
-  <div class="userTotal">
-    <h2>Your Total Score: <span id="finalTotal"></span></h2>
-  </div>
-<div class="Emeralds">
-      <img src="" id="Emeraldpic">
-</div>
-</div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/javascript/games.js"></script>
 </body>
 
 </html>
