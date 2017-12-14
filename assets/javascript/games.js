@@ -70,7 +70,7 @@ $(document).ready(function() {
     }
     else if (emeraldcount >= 1) {
       emeraldcount--;
-      $("#outcome").html('Oh NO! Dr. Robotnik stole a Chaos Emerald');
+      $("#outcome").html('Oh NO! Dr. Robotnik stole a Chaos Emerald!');
       $("#emeraldstrack").text(emeraldcount);
     }
   }
