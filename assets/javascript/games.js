@@ -53,7 +53,7 @@ $(document).ready(function() {
       $('#outcome').html("You've found all of the Chaos Emeralds. You have now become Super Sonic!");
       $("#pictureToChange").attr("src", "assets/images/SuperSonic.jpg");
     } else {
-      $('#outcome').html("Congrations you received a Chaos Emerald!");
+      $('#outcome').html("Congratulations you received a Chaos Emerald! Take that Robotnik!");
     }
 
   }
